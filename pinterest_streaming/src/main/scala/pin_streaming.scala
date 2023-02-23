@@ -102,8 +102,8 @@ object pin_streaming {
           .option("drive", "org.postgresql.Driver")
           .start()
 
-    query.streams.awaitAnyTermination()
-    transformed_df.streams.awaitAnyTermination()
+    query.awaitAnyTermination()
+    transformed_df.awaitAnyTermination()
 
 
   }
